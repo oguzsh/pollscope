@@ -1,24 +1,39 @@
-# README
+<div align="center">
+  <img width="75%" src="https://media.giphy.com/media/Um7f7HzPD8VKWgx2ZY/giphy.gif" />
+</div>
+<br />
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Pollscope
+## Prerequisites
+- The setups steps expect following tools installed on the system.
+  - Ruby - 3.0.2
+  - Rails - 6.1.4
 
-Things you may want to cover:
+## Schema
+![image](https://user-images.githubusercontent.com/15168877/155898458-0e724f1e-fba8-4adf-aa40-2c676147e811.png)
 
-* Ruby version
+## Deployment instructions
 
-* System dependencies
+### 1. Check out the repository
 
-* Configuration
+```bash
+git clone git@github.com:oguzsh/pollscope.git
+```
 
-* Database creation
+### 2. Create and setup the database
 
-* Database initialization
+Run the following commands to create and setup the database.
 
-* How to run the test suite
+```ruby
+rake db:create && rake db:migrate && rake db:seed
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### 3. Start the Rails server
 
-* Deployment instructions
+You can start the rails server using the command given below.
 
-* ...
+```ruby
+rails s
+```
+
+And now you can visit the site with the URL http://localhost:3000
