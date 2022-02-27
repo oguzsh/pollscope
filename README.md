@@ -3,7 +3,6 @@
 </div>
 <br />
 
-# Pollscope
 ## Prerequisites
 - The setups steps expect following tools installed on the system.
   - Ruby - 3.0.2
