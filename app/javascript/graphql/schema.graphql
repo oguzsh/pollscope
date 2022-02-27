@@ -1,0 +1,51 @@
+type Choice {
+  choiceText: String
+  createdAt: ISO8601DateTime!
+  id: ID!
+  pollId: Int!
+  updatedAt: ISO8601DateTime!
+}
+
+"""
+An ISO 8601-encoded datetime
+"""
+scalar ISO8601DateTime
+
+type Mutation {
+  """
+  An example field added by the generator
+  """
+  testField: String!
+}
+
+type Poll {
+  createdAt: ISO8601DateTime!
+  id: ID!
+  question: String
+  updatedAt: ISO8601DateTime!
+  userId: Int!
+}
+
+type Query {
+  choices: [Choice!]!
+  polls: [Poll!]!
+  users: [User!]!
+  votes: [Vote!]!
+}
+
+type User {
+  createdAt: ISO8601DateTime!
+  email: String
+  id: ID!
+  name: String
+  updatedAt: ISO8601DateTime!
+}
+
+type Vote {
+  choiceId: Int!
+  createdAt: ISO8601DateTime!
+  id: ID!
+  pollId: Int!
+  updatedAt: ISO8601DateTime!
+  userId: Int!
+}
