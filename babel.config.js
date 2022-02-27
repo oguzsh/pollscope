@@ -78,12 +78,6 @@ module.exports = function(api) {
         {
           async: false
         }
-      ],
-      isProductionEnv && [
-        'babel-plugin-transform-react-remove-prop-types',
-        {
-          removeImport: true
-        }
       ]
     ].filter(Boolean)
   }
