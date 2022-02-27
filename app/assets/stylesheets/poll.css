@@ -6,9 +6,11 @@
   align-items: center;
   padding: 30px;
   text-align: center;
+  margin: 0px auto;
+  width: %90;
+  max-width: 960px
 }
 
 .poll-box{
-  width: 50%;
   font-weight: 400 !important;
 }
