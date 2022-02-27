@@ -4,6 +4,8 @@ type Choice {
   id: ID!
   pollId: Int!
   updatedAt: ISO8601DateTime!
+  voteCount: Int!
+  votes: [Vote!]!
 }
 
 """
@@ -19,6 +21,7 @@ type Mutation {
 }
 
 type Poll {
+  choices: [Choice!]!
   createdAt: ISO8601DateTime!
   id: ID!
   question: String
@@ -38,6 +41,7 @@ type User {
   email: String
   id: ID!
   name: String
+  polls: [Poll!]
   updatedAt: ISO8601DateTime!
 }
 

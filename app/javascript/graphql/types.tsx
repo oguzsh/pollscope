@@ -24,6 +24,8 @@ export type Choice = {
   id: Scalars['ID'];
   pollId: Scalars['Int'];
   updatedAt: Scalars['ISO8601DateTime'];
+  voteCount: Scalars['Int'];
+  votes: Array<Vote>;
 };
 
 export type Mutation = {
@@ -34,6 +36,7 @@ export type Mutation = {
 
 export type Poll = {
   __typename?: 'Poll';
+  choices: Array<Choice>;
   createdAt: Scalars['ISO8601DateTime'];
   id: Scalars['ID'];
   question?: Maybe<Scalars['String']>;
@@ -55,6 +58,7 @@ export type User = {
   email?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   name?: Maybe<Scalars['String']>;
+  polls?: Maybe<Array<Poll>>;
   updatedAt: Scalars['ISO8601DateTime'];
 };
 
