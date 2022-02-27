@@ -5,10 +5,11 @@ import mount from '../mount';
 import "channels"
 
 // React Components
-import Books from "../components/Book/book_container"
+// import UserContainer from "../components/User/user_container"
+import PollsContainer from "../components/Poll/polls_container"
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-mount({Books})
+mount({PollsContainer})

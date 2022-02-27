@@ -1,0 +1,14 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+}
+
+.poll-box{
+  width: 50%;
+  font-weight: 400 !important;
+}
