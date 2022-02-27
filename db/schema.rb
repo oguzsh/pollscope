@@ -12,8 +12,11 @@
 
 ActiveRecord::Schema.define(version: 2022_02_27_184407) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "choices", force: :cascade do |t|
-    t.integer "poll_id", null: false
+    t.bigint "poll_id", null: false
     t.string "choice_text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -21,7 +24,7 @@ ActiveRecord::Schema.define(version: 2022_02_27_184407) do
   end
 
   create_table "polls", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.string "question"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -36,9 +39,9 @@ ActiveRecord::Schema.define(version: 2022_02_27_184407) do
   end
 
   create_table "votes", force: :cascade do |t|
-    t.integer "choice_id", null: false
-    t.integer "poll_id", null: false
-    t.integer "user_id", null: false
+    t.bigint "choice_id", null: false
+    t.bigint "poll_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["choice_id"], name: "index_votes_on_choice_id"
