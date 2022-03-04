@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { withProvider } from 'providers/graphql';
+import { withProvider } from '../../providers/graphql';
 import { useQuery } from '@apollo/client';
-import { ALL_USERS } from 'queries/user';
+import { ALL_USERS } from '../../queries/user';
 
 import UserCard from './user_card';
 
