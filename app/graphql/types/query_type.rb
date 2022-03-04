@@ -14,7 +14,7 @@ module Types
     end
 
     def polls
-      Poll.all
+      Poll.all.includes([:choices])
     end
 
     def votes
