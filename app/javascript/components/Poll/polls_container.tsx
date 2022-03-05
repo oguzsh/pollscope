@@ -1,10 +1,12 @@
 import React from 'react';
 
-import { withProvider } from 'providers/graphql';
+import { withProvider } from '../../providers/graphql';
 import { useQuery } from '@apollo/client';
-import { ALL_POLLS } from 'queries/pool';
+import { ALL_POLLS } from '../../queries/pool';
 
 import Polls from './polls';
+
+import '@assets/stylesheets/poll.css';
 
 const PollsContainer: React.FC = () => {
   const { data, loading, error } = useQuery(ALL_POLLS);
