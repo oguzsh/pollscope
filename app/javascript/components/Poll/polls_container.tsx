@@ -6,6 +6,8 @@ import { ALL_POLLS } from '../../queries/pool';
 
 import Polls from './polls';
 
+import '@assets/stylesheets/poll.css';
+
 const PollsContainer: React.FC = () => {
   const { data, loading, error } = useQuery(ALL_POLLS);
 
